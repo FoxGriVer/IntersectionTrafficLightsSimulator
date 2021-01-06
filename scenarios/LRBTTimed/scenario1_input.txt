@@ -1,0 +1,67 @@
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+step
+state

@@ -1,0 +1,67 @@
+state
+vehicle left
+vehicle right
+pedestrian left
+pedestrian right
+step
+state
+vehicle left
+vehicle right
+pedestrian left
+pedestrian right
+step
+state
+vehicle left
+vehicle right
+pedestrian left
+pedestrian right
+step
+state
+vehicle left
+vehicle right
+pedestrian left
+pedestrian right
+step
+state
+vehicle left
+vehicle right
+pedestrian left
+pedestrian right
+step
+state
+vehicle left
+vehicle right
+pedestrian left
+pedestrian right
+step
+state
+vehicle left
+vehicle right
+pedestrian left
+pedestrian right
+step
+state
+vehicle left
+vehicle right
+pedestrian left
+pedestrian right
+step
+state
+vehicle left
+vehicle right
+pedestrian left
+pedestrian right
+step
+state
+vehicle left
+vehicle right
+pedestrian left
+pedestrian right
+step
+state
+vehicle left
+vehicle right
+pedestrian left
+pedestrian right
+step
+state

@@ -1,0 +1,141 @@
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+pedestrian right
+pedestrian left
+pedestrian bottom
+pedestrian top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+pedestrian right
+pedestrian left
+pedestrian bottom
+pedestrian top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+pedestrian right
+pedestrian left
+pedestrian bottom
+pedestrian top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+pedestrian right
+pedestrian left
+pedestrian bottom
+pedestrian top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+pedestrian right
+pedestrian left
+pedestrian bottom
+pedestrian top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+pedestrian right
+pedestrian left
+pedestrian bottom
+pedestrian top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+pedestrian right
+pedestrian left
+pedestrian bottom
+pedestrian top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+pedestrian right
+pedestrian left
+pedestrian bottom
+pedestrian top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+pedestrian right
+pedestrian left
+pedestrian bottom
+pedestrian top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+pedestrian right
+pedestrian left
+pedestrian bottom
+pedestrian top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+pedestrian right
+pedestrian left
+pedestrian bottom
+pedestrian top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+pedestrian right
+pedestrian left
+pedestrian bottom
+pedestrian top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+pedestrian right
+pedestrian left
+pedestrian bottom
+pedestrian top
+step
+state
+vehicle left
+vehicle right
+vehicle bottom
+vehicle top
+pedestrian right
+pedestrian left
+pedestrian bottom
+pedestrian top
+step
+state
