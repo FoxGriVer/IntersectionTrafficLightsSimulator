@@ -4,5 +4,12 @@ package trafficlight;
  * TODO description
  */
 public class Strategy {
-	public OnRequest strategyType = new OnRequest();
+	
+	private boolean possibleToSwitch = false;
+	
+	public void advanceTime() {
+		original();
+		
+		this.decreaseNumberInQueueByOneForAutos();
+	}
 }

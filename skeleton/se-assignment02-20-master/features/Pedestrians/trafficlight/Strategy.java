@@ -24,7 +24,7 @@ public class Strategy {
 		for (RoadBehavior road: this.roads) {
 			TrafficLightColor pedestrianTrafficLightColor = road.getPedestrianRoad().getTrafficLightColor();
 			
-			if (globalStep <= this.trafficLightPeriod) {
+			if (this.greenPhaseStep <= this.trafficLightPeriod) {
 				if (pedestrianTrafficLightColor == TrafficLightColor.GREEN) {
 					road.getPedestrianRoad().decreaseNumberInQueueByOne();
 				}
@@ -39,17 +39,6 @@ public class Strategy {
 	}
 	
 	private void changeIntersectionsTrafficLightForPedestrian(RoadBehavior road) {
-//	    if (!this.trafficLightChanged) {
-//	    	if (road.getPedestrianRoad().getTrafficLightColor() == TrafficLightColor.RED) {
-//				this.changePedestrianTrafficLightFromRedToGreen(road);
-//				return;
-//			}
-//			if (road.getPedestrianRoad().getTrafficLightColor() == TrafficLightColor.GREEN) {
-//				this.changePedestrianTrafficLightFromGreenToRed(road);
-//				return;
-//			}	
-//	    }
-			
 	    if (road.getTrafficLightColor() == TrafficLightColor.RED) {
 	    	this.changePedestrianTrafficLightFromRedToGreen(road);
 			return;
@@ -61,10 +50,6 @@ public class Strategy {
 	    	this.changePedestrianTrafficLightFromGreenToRed(road);
 	    	return;
 	    }
-//	    if (road.getTrafficLightColor() == TrafficLightColor.ORANGE) {
-//	    	this.changePedestrianTrafficLightFromGreenToRed(road);
-//	    	return;
-//	    }
 	}
 	
 	private void changePedestrianTrafficLightFromGreenToRed(RoadBehavior road) {

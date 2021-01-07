@@ -23,7 +23,6 @@ public class Main {
 				continuousInput(intersection);
 			}
 			
-//		    System.out.println(intersection.getIntersectionState());
 			return;
 		}
 		original(input, intersection);

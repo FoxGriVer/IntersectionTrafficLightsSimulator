@@ -7,9 +7,9 @@
 	<feature automatic="selected" name="Right"/>
 	<feature manual="selected" name="Bottom"/>
 	<feature manual="selected" name="Top"/>
-	<feature manual="selected" name="OrangeLight"/>
+	<feature name="OrangeLight"/>
 	<feature manual="selected" name="Pedestrians"/>
 	<feature automatic="selected" name="Strategy"/>
-	<feature manual="selected" name="Timed"/>
-	<feature automatic="unselected" name="OnRequest"/>
+	<feature automatic="unselected" name="Timed"/>
+	<feature manual="selected" name="OnRequest"/>
 </configuration>

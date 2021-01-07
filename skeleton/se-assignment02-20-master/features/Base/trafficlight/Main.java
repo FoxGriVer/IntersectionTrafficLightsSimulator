@@ -75,7 +75,7 @@ public class Main {
 		continuousInput(intersection);
 	}
 	
-	private Road parseRoad(String roadString) {
+	public Road parseRoad(String roadString) {
 		throw new IllegalArgumentException("Cannot parse road: " + roadString);
 	}
 	

@@ -9,7 +9,7 @@ public class Strategy {
 	
 	public void advanceTime() {		
 		
-	    if (this.globalStep == this.trafficLightPeriod) {
+	    if (this.greenPhaseStep == this.trafficLightPeriod) {
 	    	if (TrafficLightColor.contains("ORANGE")) {
 		    	this.changingPhase = true;
 	    	} else {
@@ -17,7 +17,7 @@ public class Strategy {
 	    	}
 	    	
 	    	this.changeIntersectionsTrafficLight();
-			this.globalStep = 0;
+			this.greenPhaseStep = 0;
 	    }
 	    
 		original();
@@ -25,21 +25,9 @@ public class Strategy {
 	    if (this.changingPhase == false) {	  
 	    	this.decreaseNumberInQueueByOneForAutos();
 	    	
-	    	++this.globalStep;
+	    	++this.greenPhaseStep;
 	    }	    
-	}
-	
-	private void decreaseNumberInQueueByOneForAutos() {
-		for (RoadBehavior road: this.roads) {
-			TrafficLightColor trafficLightColor = road.getTrafficLightColor();
-			
-			if (this.globalStep <= this.trafficLightPeriod) {
-				if (trafficLightColor == TrafficLightColor.GREEN) {
-					road.decreaseNumberInQueueByOne();
-				}
-			}			
-		}	
-	}
+	}	
 	
 	private void changeIntersectionsTrafficLight() {
 		for (RoadBehavior road: this.roads) {

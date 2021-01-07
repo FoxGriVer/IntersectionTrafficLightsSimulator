@@ -6,13 +6,13 @@ import java.util.ArrayList;
  * TODO description
  */
 public class Strategy {
-	private int globalStep;
+	private int greenPhaseStep;
 	private ArrayList<RoadBehavior> roads;
 	private int trafficLightPeriod = 10;
 
 	public Strategy() {
 		this.roads = new ArrayList<RoadBehavior>();
-		this.globalStep = 1;
+		this.greenPhaseStep = 1;
 		
 		Road[] roads = Road.values();
 		for (Road road: roads) {
@@ -20,6 +20,10 @@ public class Strategy {
 				this.roads.add(new RoadBehavior(road));
 			}
 		}		
+	}
+	
+	public ArrayList<RoadBehavior> getRoads() {
+		return this.roads;
 	}
 	
 	public void enqueueVehicle(Road roadDirection) {
@@ -33,6 +37,18 @@ public class Strategy {
 	
 	public void advanceTime() {
 		
+	}
+	
+	private void decreaseNumberInQueueByOneForAutos() {
+		for (RoadBehavior road: this.roads) {
+			TrafficLightColor trafficLightColor = road.getTrafficLightColor();
+			
+			if (this.greenPhaseStep <= this.trafficLightPeriod) {
+				if (trafficLightColor == TrafficLightColor.GREEN) {
+					road.decreaseNumberInQueueByOne();
+				}
+			}			
+		}	
 	}
 	
 	public String getIntersectionState() {

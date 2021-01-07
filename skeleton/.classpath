@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="se-assignment02-20-master/features/Base"/>
+	<classpathentry kind="src" path="se-assignment02-20-master/features/Bottom"/>
+	<classpathentry kind="src" path="se-assignment02-20-master/features/Left"/>
+	<classpathentry kind="src" path="se-assignment02-20-master/features/OnRequest"/>
+	<classpathentry kind="src" path="se-assignment02-20-master/features/OrangeLight"/>
+	<classpathentry kind="src" path="se-assignment02-20-master/features/Pedestrians"/>
+	<classpathentry kind="src" path="se-assignment02-20-master/features/Right"/>
+	<classpathentry kind="src" path="se-assignment02-20-master/features/Timed"/>
+	<classpathentry kind="src" path="se-assignment02-20-master/features/Top"/>
+	<classpathentry kind="src" path="se-assignment02-20-master/src"/>
+	<classpathentry kind="output" path="se-assignment02-20-master/bin"/>
+</classpath>
