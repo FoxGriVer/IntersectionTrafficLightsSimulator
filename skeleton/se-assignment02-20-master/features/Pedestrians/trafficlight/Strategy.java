@@ -4,13 +4,13 @@ package trafficlight;
  * TODO description
  */
 public class Strategy {
+	private boolean pedestrianStandInQueue = false;
 	
 	public void enqueuePedestrian(Road roadDirection) {
 		RoadBehavior road = this.getRoad(roadDirection, roads);
 		
 		if(road != null) {
 			road.getPedestrianRoad().increaseNumberInQueueByOne();
-			road.getPedestrianRoad().getNumberOfQueuedObjects();
 		}
 	}
 	
@@ -21,12 +21,57 @@ public class Strategy {
 	}
 	
 	private void decreaseNumberInQueueByOneForPedestrians() {
+		if(StrategyType.getStrategyType().name() == "Timed") {
+			this.decreaseNumberInQueueByOneForPedestriansTimedStrategy();
+			return;
+		}
+		if(StrategyType.getStrategyType().name() == "OnDemand") {
+			this.checkPedestriansOnTheGreenRoadDirections();
+			
+			if(this.possibleToSwitchTrafficLights && this.pedestrianStandInQueue) {
+				this.turnOnChangingPhase();
+				
+		    	this.changeIntersectionsTrafficLight();
+			}
+			
+			this.decreaseNumberInQueueByOneForPedestriansOnDemandStrategy();
+			return;
+		}
+	}
+	
+	private void decreaseNumberInQueueByOneForPedestriansTimedStrategy() {
 		for (RoadBehavior road: this.roads) {
 			TrafficLightColor pedestrianTrafficLightColor = road.getPedestrianRoad().getTrafficLightColor();
 			
 			if (this.greenPhaseStep <= this.trafficLightPeriod) {
 				if (pedestrianTrafficLightColor == TrafficLightColor.GREEN) {
 					road.getPedestrianRoad().decreaseNumberInQueueByOne();
+				}
+			}
+		}	
+	}
+	
+	private void decreaseNumberInQueueByOneForPedestriansOnDemandStrategy() {
+		for (RoadBehavior road: this.roads) {
+			TrafficLightColor pedestrianTrafficLightColor = road.getPedestrianRoad().getTrafficLightColor();
+			
+			if (pedestrianTrafficLightColor == TrafficLightColor.GREEN) {
+				road.getPedestrianRoad().decreaseNumberInQueueByOne();
+			}
+		}	
+	}
+	
+	private void checkPedestriansOnTheGreenRoadDirections() {
+		for (RoadBehavior road: this.roads) {
+			TrafficLightColor pedestrianTrafficLightColor = road.getPedestrianRoad().getTrafficLightColor();
+			
+			if (pedestrianTrafficLightColor == TrafficLightColor.RED) {
+				int currentNumberOfQueuedPedestrians = road.getPedestrianRoad().getNumberOfQueuedObjects();
+				
+				if (currentNumberOfQueuedPedestrians >= 1) {
+					System.out.println("There is an pedestrian in the queue on a grean road direction");
+					
+					this.pedestrianStandInQueue = true;
 				}
 			}
 		}	

@@ -7,7 +7,7 @@ public enum TrafficLightColor {
 	RED,
 	GREEN;
 	
-	// Checks whether the enumeration contains the entered road direction.
+	// Checks whether the enumeration contains the entered traffic light color.
 	public static boolean contains(String inputString) {
 		TrafficLightColor[] trafficLightColors = TrafficLightColor.values();
 		for (TrafficLightColor trafficLightColor : trafficLightColors) {

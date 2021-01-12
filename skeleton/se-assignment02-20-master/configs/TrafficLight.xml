@@ -8,8 +8,8 @@
 	<feature manual="selected" name="Bottom"/>
 	<feature manual="selected" name="Top"/>
 	<feature name="OrangeLight"/>
-	<feature manual="selected" name="Pedestrians"/>
+	<feature name="Pedestrians"/>
 	<feature automatic="selected" name="Strategy"/>
-	<feature automatic="unselected" name="Timed"/>
-	<feature manual="selected" name="OnRequest"/>
+	<feature manual="selected" name="Timed"/>
+	<feature automatic="unselected" name="OnRequest"/>
 </configuration>

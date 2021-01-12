@@ -3,10 +3,10 @@ package test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import trafficlight.PedestrianRoadBehavior;
 import trafficlight.RoadBehavior;
 import trafficlight.Road;
 import trafficlight.Strategy;
+import trafficlight.PedestrianRoadBehavior;
 import trafficlight.TrafficLightColor;
 
 /**

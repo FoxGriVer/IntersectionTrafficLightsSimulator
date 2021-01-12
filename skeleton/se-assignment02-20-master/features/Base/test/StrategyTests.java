@@ -3,11 +3,9 @@ package test;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import trafficlight.PedestrianRoadBehavior;
 import trafficlight.Road;
 import trafficlight.RoadBehavior;
 import trafficlight.Strategy;
-import trafficlight.TrafficLightColor;
 
 /**
  * TODO description

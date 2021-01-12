@@ -3,18 +3,11 @@ package trafficlight;
 /**
  * TODO description
  */
-public class Strategy {
-	
-	private boolean changingPhase = false;
+public class Strategy {	
 	
 	public void advanceTime() {		
-		
 	    if (this.greenPhaseStep == this.trafficLightPeriod) {
-	    	if (TrafficLightColor.contains("ORANGE")) {
-		    	this.changingPhase = true;
-	    	} else {
-		    	this.changingPhase = false;
-	    	}
+	    	this.turnOnChangingPhase();
 	    	
 	    	this.changeIntersectionsTrafficLight();
 			this.greenPhaseStep = 0;
@@ -22,16 +15,12 @@ public class Strategy {
 	    
 		original();
 	    
-	    if (this.changingPhase == false) {	  
-	    	this.decreaseNumberInQueueByOneForAutos();
+	    if (this.changingPhase == false) {	 
+	    	if(this.greenPhaseStep <= this.trafficLightPeriod) {
+		    	this.decreaseNumberInQueueByOneForAutos();
+	    	}
 	    	
 	    	++this.greenPhaseStep;
 	    }	    
 	}	
-	
-	private void changeIntersectionsTrafficLight() {
-		for (RoadBehavior road: this.roads) {
-			this.changeRoadDirectionTrafficLight(road);	
-		}
-	}
 }

@@ -8,11 +8,16 @@ import java.util.ArrayList;
 public class Strategy {
 	private int greenPhaseStep;
 	private ArrayList<RoadBehavior> roads;
-	private int trafficLightPeriod = 10;
+	private int trafficLightPeriod;
+	private boolean changingPhase;
+	private boolean possibleToSwitchTrafficLights;
 
 	public Strategy() {
 		this.roads = new ArrayList<RoadBehavior>();
 		this.greenPhaseStep = 1;
+		this.trafficLightPeriod = 10;
+		this.changingPhase = false;
+		this.possibleToSwitchTrafficLights = false;
 		
 		Road[] roads = Road.values();
 		for (Road road: roads) {
@@ -31,23 +36,20 @@ public class Strategy {
 		
 		if(road != null) {
 			road.increaseNumberInQueueByOne();
-			road.getNumberOfQueuedObjects();
 		}
 	}
 	
 	public void advanceTime() {
-		
+
 	}
 	
 	private void decreaseNumberInQueueByOneForAutos() {
 		for (RoadBehavior road: this.roads) {
 			TrafficLightColor trafficLightColor = road.getTrafficLightColor();
 			
-			if (this.greenPhaseStep <= this.trafficLightPeriod) {
-				if (trafficLightColor == TrafficLightColor.GREEN) {
-					road.decreaseNumberInQueueByOne();
-				}
-			}			
+			if (trafficLightColor == TrafficLightColor.GREEN) {
+				road.decreaseNumberInQueueByOne();
+			}
 		}	
 	}
 	
@@ -88,6 +90,12 @@ public class Strategy {
 		return sortedArrayOfRoads;
 	}
 	
+	private void changeIntersectionsTrafficLight() {
+		for (RoadBehavior road: this.roads) {
+			this.changeRoadDirectionTrafficLight(road);	
+		}
+	}
+	
 	private void changeRoadDirectionTrafficLight(RoadBehavior road) {	
 		road.rememberCurrentTrafficLightColor();
 		this.changeIntersectionsTrafficLightForAuto(road);
@@ -114,5 +122,16 @@ public class Strategy {
 		if (road.getTrafficLightColor() == TrafficLightColor.RED) {
 			road.setTrafficLightColor(TrafficLightColor.GREEN);
 		}
+	}
+	
+	/**
+	 * Turn on the changing phase.
+	 * This feature enable when there is "orange" color light presented,
+	 * because in the oposite way it changes immediately 
+	 */
+	private void turnOnChangingPhase() {
+		if (TrafficLightColor.contains("ORANGE")) {
+	    	this.changingPhase = true;
+    	} 
 	}
 }
